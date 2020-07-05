@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-const Homepage = () => (
+const Homepage: React.FC = () => (
   <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
     <p>
@@ -25,19 +25,19 @@ const Homepage = () => (
   </header>
 );
 
-const AdamComponent = () => (
+const AdamComponent: React.FC = () => (
   <div>Adam&apos;s component!</div>
 );
 
-const OtherComponent = () => (
+const OtherComponent: React.FC = () => (
   <div>Other component!</div>
 );
 
-const Fallback = () => (
+const Fallback: React.FC = () => (
   <div>Page not found!</div>
 );
 
-const App = () => (
+const App: React.FC = () => (
   <div className="App">
     <Router basename="/app">
       <Switch>

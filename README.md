@@ -12,3 +12,4 @@
 - [Helpful link](https://stackoverflow.com/questions/37979489/how-to-watch-and-reload-ts-node-when-typescript-files-change) for server development
 - `/bin/www` only used in production, `yarn dev` bypasses this file ([see here](https://stackoverflow.com/questions/23169941/what-does-bin-www-do-in-express-4-x))
 - Keep `yarn dev` script as `nodemon`, configuration is done in `nodemon.json` file *only*
+- Need to specify which route the ReactJS app will be hosted at ([see here](https://create-react-app.dev/docs/deployment/#building-for-relative-paths))

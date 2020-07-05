@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "module": "esnext",
     "target": "es5",
     "lib": [
       "dom",
@@ -12,7 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    // "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,6 +24,10 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
   ]
 }

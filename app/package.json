@@ -20,6 +20,7 @@
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "move": "bash ./scripts/move.sh",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

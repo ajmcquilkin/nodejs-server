@@ -13,3 +13,4 @@
 - `/bin/www` only used in production, `yarn dev` bypasses this file ([see here](https://stackoverflow.com/questions/23169941/what-does-bin-www-do-in-express-4-x))
 - Keep `yarn dev` script as `nodemon`, configuration is done in `nodemon.json` file *only*
 - Need to specify which route the ReactJS app will be hosted at ([see here](https://create-react-app.dev/docs/deployment/#building-for-relative-paths))
+- Also need to specify a `basename` within `react-router-dom`, consider putting this in an `.env` variable or in `package.json` since this needs to be accessed by the react app, the package, the move script, and the server ([see here](https://reactrouter.com/web/api/BrowserRouter/basename-string))

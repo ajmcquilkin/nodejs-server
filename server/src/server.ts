@@ -19,10 +19,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use('/app', express.static(path.join(__dirname, '..', 'static/app')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// allows serving of react app
+app.use('/app', express.static(path.join(__dirname, '..', 'static/app')));
+app.get('/app/*', function (req: Request, res: Response) {
+  res.sendFile(path.join(__dirname, '..', 'static/app/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req: Request, res: Response, next: NextFunction) {

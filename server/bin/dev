@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 
-console.log('using \'bin\\dev\'');
 var app = require('../src/server.ts');
 
 var debug = require('debug')('nodejs-server:server');

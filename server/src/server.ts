@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from 'express';
 import createError, { HttpError } from 'http-errors';
 import path from 'path';
 import cookieParser from 'cookie-parser';
@@ -9,7 +9,7 @@ import usersRouter from './routes/users';
 
 const app = express();
 
-// view engine setup
+// view engine setup (pug)
 app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'pug');
 
@@ -25,17 +25,17 @@ app.use('/users', usersRouter);
 
 // allows serving of react app
 app.use('/app', express.static(path.join(__dirname, '..', 'static/app')));
-app.get('/app/*', function (req: Request, res: Response) {
+app.get('/app/*', (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, '..', 'static/app/index.html'));
 });
 
 // catch 404 and forward to error handler
-app.use(function(req: Request, res: Response, next: NextFunction) {
+app.use((req: Request, res: Response, next: NextFunction) => {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err: HttpError, req: Request, res: Response, next: NextFunction) {
+app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

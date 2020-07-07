@@ -15,3 +15,4 @@
 - Need to specify which route the ReactJS app will be hosted at ([see here](https://create-react-app.dev/docs/deployment/#building-for-relative-paths))
 - Also need to specify a `basename` within `react-router-dom`, consider putting this in an `.env` variable or in `package.json` since this needs to be accessed by the react app, the package, the move script, and the server ([see here](https://reactrouter.com/web/api/BrowserRouter/basename-string))
 - `npx <command>` can run local packages (or installs them), e.g. `npx eslint src --ext ts` to run `eslint` from a local package ([see here](https://www.rockyourcode.com/run-locally-installed-npm-packages-without-global-install/))
+- Favicon placed in `server/public` is a generic favicon that is replaced by any lower-level favicon files

@@ -18,6 +18,7 @@ interface AppProps {
 const App: React.FC<AppProps> = ({}: AppProps) => (
   <div className="App">
     <Router basename="/app">
+      {/* TODO: Reference package.json */}
       <React.Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route path="/" exact component={Homepage} />
